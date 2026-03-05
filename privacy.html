@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Article Extractor Pro</title>
+  <meta name="description" content="Privacy Policy for Article Extractor Pro browser extension. Learn how we protect your data.">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --violet: #7C5CFC;
+      --violet-deep: #5B3FD9;
+      --violet-light: #A78BFA;
+      --bg: #FAFAFE;
+      --surface: #FFFFFF;
+      --text: #1A1035;
+      --text-secondary: #5E5680;
+      --text-muted: #9690AE;
+      --border: #EAE6F5;
+      --accent-green: #10B981;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- Hero / Header --- */
+    .hero {
+      background: linear-gradient(145deg, #1A1035 0%, #2D1B69 40%, #4C2C96 100%);
+      padding: 0 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(124,92,252,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(167,139,250,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 0 50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.3px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-badge svg {
+      opacity: 0.8;
+    }
+
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(32px, 5vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--violet-light) 0%, #C084FC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-meta {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 8px;
+    }
+
+    /* --- Content --- */
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .content h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.3px;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      position: relative;
+    }
+
+    .content h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: var(--violet);
+      border-radius: 2px;
+    }
+
+    .content h2:first-child {
+      margin-top: 0;
+    }
+
+    .content p {
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+    }
+
+    .content strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Info cards */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      box-shadow: 0 1px 4px rgba(124,92,252,0.04);
+    }
+
+    .info-card.highlight {
+      border-left: 4px solid var(--accent-green);
+      background: linear-gradient(135deg, #f0fdf9 0%, #fafffe 100%);
+    }
+
+    .info-card.highlight p {
+      color: #065f46;
+    }
+
+    /* Permission table */
+    .perm-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+
+    .perm-table th {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: left;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .perm-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .perm-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .perm-table td:first-child {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color: var(--violet-deep);
+      white-space: nowrap;
+      width: 130px;
+    }
+
+    .perm-table tr:hover td {
+      background: rgba(124,92,252,0.02);
+    }
+
+    /* Footer */
+    .footer {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      text-align: center;
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 32px;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      text-decoration: none;
+    }
+
+    .footer-logo {
+      width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--violet) 0%, var(--violet-light) 100%);
+      border-radius: 7px; color: white;
+    }
+
+    .footer-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .footer p {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .footer a {
+      color: var(--violet);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero-inner { padding: 40px 0 36px; }
+      .content { padding: 32px 20px 60px; }
+      .perm-table td:first-child { white-space: normal; }
+      .content h2 { font-size: 19px; }
+      body { font-size: 16px; }
+    }
+
+    /* Subtle entrance animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-inner { animation: fadeUp 0.6s ease both; }
+    .content { animation: fadeUp 0.6s ease 0.15s both; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Privacy Policy
+      </div>
+      <h1>Article Extractor <span>Pro</span></h1>
+      <div class="hero-meta">Last updated: March 2026</div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <h2>Overview</h2>
+    <p>Article Extractor Pro is a browser extension that extracts clean article text from web pages, removing ads, images, and navigation clutter. We are committed to protecting your privacy and being transparent about how the extension works.</p>
+
+    <div class="info-card highlight">
+      <p><strong>The short version:</strong> Article Extractor Pro does NOT collect, transmit, or store any personal data on external servers. All data processing happens entirely within your browser. No accounts, no tracking, no analytics.</p>
+    </div>
+
+    <h2>Data Collection</h2>
+    <p>Article Extractor Pro does <strong>not</strong> collect any personal information. We do not track your browsing activity, and we do not send any data to external servers. The extension operates entirely offline within your browser.</p>
+
+    <h2>What Data is Stored Locally</h2>
+    <p>The following data is stored locally in your browser using the Chrome Storage API. This data never leaves your device:</p>
+
+    <div class="info-card">
+      <p><strong>Extracted articles</strong> — When you extract an article, the title, body text, source URL, and basic metadata (author, date, word count) are saved in your browser's local storage. Articles are automatically deleted after 24 hours.</p>
+    </div>
+
+    <div class="info-card">
+      <p><strong>User preferences</strong> — Your settings such as dark mode, font size, quote highlighting, and copy format preferences are saved locally so they persist between sessions.</p>
+    </div>
+
+    <h2>Data Sharing</h2>
+    <p>We do <strong>not</strong> share, sell, or transmit any data to third parties. No data leaves your browser. There are no analytics tools, no tracking pixels, no advertising SDKs, and no telemetry of any kind built into this extension.</p>
+
+    <h2>Permissions Explained</h2>
+    <p>The extension requires certain browser permissions to function. Here is a transparent explanation of each permission and why it is needed:</p>
+
+    <table class="perm-table">
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Why It's Needed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>activeTab</td>
+          <td>To read the content of the web page you're currently viewing when you click "Extract Current Page." Only activates on your explicit action.</td>
+        </tr>
+        <tr>
+          <td>scripting</td>
+          <td>To inject the content extraction script into web pages during batch processing. When you paste multiple URLs, the extension loads each page and runs a script to extract the article text.</td>
+        </tr>
+        <tr>
+          <td>storage</td>
+          <td>To save extracted articles and your preferences locally in the browser. All stored data remains on your device and is never transmitted externally.</td>
+        </tr>
+        <tr>
+          <td>tabs</td>
+          <td>To create background tabs for batch extraction and to identify the currently active tab for one-click extraction.</td>
+        </tr>
+        <tr>
+          <td>alarms</td>
+          <td>To schedule automatic cleanup of extracted articles older than 24 hours, keeping your browser storage clean.</td>
+        </tr>
+        <tr>
+          <td>sidePanel</td>
+          <td>To provide an optional side panel viewing mode where you can read extracted articles alongside your browser window.</td>
+        </tr>
+        <tr>
+          <td>Host (all URLs)</td>
+          <td>The content script needs to run on any website because users extract articles from any news source. It only activates when you explicitly trigger extraction.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Third-Party Services</h2>
+    <p>Article Extractor Pro does not integrate with any third-party services, APIs, or analytics platforms. The only external resource loaded is <strong>Google Fonts</strong> (for the extension's UI typography), which is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Article Extractor Pro does not knowingly collect any information from children under the age of 13. The extension does not collect information from any user of any age.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Any changes will be reflected in the "Last updated" date at the top of this page. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>Contact</h2>
+    <p>If you have any questions or concerns about this privacy policy or the extension, you can reach out via GitHub:</p>
+    <p><a href="https://github.com/sadiktd" target="_blank" rel="noopener">github.com/sadiktd</a></p>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      </div>
+      <span class="footer-name">Article Extractor Pro</span>
+    </div>
+    <p>&copy; 2026 Article Extractor Pro. All rights reserved.</p>
+    <p style="margin-top: 6px;"><a href="https://sadiktd.github.io">sadiktd.github.io</a></p>
+  </footer>
+
+</body>
+</html>
